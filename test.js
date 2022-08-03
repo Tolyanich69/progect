@@ -31,4 +31,4 @@ for (let key in options) {
         counter++;
     }
 }
-console.log(counter);   
+console.log(counter);
