@@ -1,0 +1,15 @@
+html,
+body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+.wrapper {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.main-page {
+    background: #E1F3F3;
+    height: 100%;
+}
+
