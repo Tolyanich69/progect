@@ -11,5 +11,53 @@ body {
 .main-page {
     background: #E1F3F3;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    display: flex;
+}
+
+.logo-text {
+    margin-left: 24px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #013D82;
+}
+
+.report-name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: #252D30
+}
+
+.report-date {
+    text-align: center;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #252D30;
+    margin-bottom: 22px;
+}
+
+.report-container  {
+    background: #fff;
+    padding: 12px 12px;
+}
+
+.report-table {
+    background-color:#DCC48E;
+    
+}
+
+th {
+    border:1px solid #000;
 }
 
