@@ -1,0 +1,22 @@
+<thead>
+                        <tr>
+                            <th scope="col">Період</th>
+                            <th scope="col">БЕРЕЖАНИ</th>
+                            <th scope="col">БЕРЕЖАНИ<br> ТОВ</th>
+                            <th scope="col">БЕРЕЖАНИ<br> ФОП</th>
+                            <th scope="col">БІЛОКРИНИЦЯ</th>
+                            <th scope="col">БІЛОКРИНИЦЯ<br> ТОВ</th>
+                            <th scope="col">БІЛОКРИНИЦЯ<br> ФОП</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">01.08.2022</th>
+                            <td>79451,62</td>
+                            <td>61037,02</td>
+                            <td>18414,6</td>
+                            <td>23911,1</td>
+                            <td>16978,81</td>
+                            <td>6932,29</td>
+                        </tr>
+                    </tbody>

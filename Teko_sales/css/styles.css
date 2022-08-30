@@ -52,12 +52,20 @@ header {
     padding: 12px 12px;
 }
 
-.report-table {
-    background-color:#DCC48E;
+.head-table {
+    background-color:#e6e9ba;
+    color: rgb(40, 82, 199);
     
 }
 
+td,
 th {
-    border:1px solid #000;
+    border: 1px solid rgb(78, 129, 224);
+    padding: 5px 10px;
+    text-align: center;
+}
+
+tbody {
+    background-color: #e4f0f5;
 }
 
