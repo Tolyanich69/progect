@@ -50,9 +50,10 @@ header {
 .report-container  {
     background: #fff;
     padding: 12px 12px;
+    overflow: scroll;
 }
 
-.head-table {
+.table {
     background-color:#e6e9ba;
     color: rgb(40, 82, 199);
     
