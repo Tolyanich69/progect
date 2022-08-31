@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    margin-top: 32px;
+    margin-top: 12px;
     margin-bottom: 24px;
     display: flex;
 }
@@ -72,7 +72,7 @@ thead th {
     position: sticky;
     top: 0;
     background: #8cbdda;
-    color: rgb(22, 61, 87);
+    /* color: rgb(22, 61, 87); */
     color: #080a16;
 }
 thead th:first-child {
