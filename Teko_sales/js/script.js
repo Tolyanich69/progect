@@ -9,10 +9,11 @@ xhr.send();
 
 xhr.onload = () => {
     getTableHead(xhr.response[0]);
+    getTablebody(xhr.response);
+    getTableFoot(xhr.response[xhr.response.length-1])
 };
 
 const  getTableHead = (fields) => {
-    console.log(fields);
     const table = document.querySelector('.table');
     const thead = document.createElement('thead');
     const tr = document.createElement('tr');
@@ -29,26 +30,48 @@ const  getTableHead = (fields) => {
 
 };
 
-// function viewInTable(data) {
-//     document.querySelector('.report-container')
-//             .innerHTML =`<table><thead class = "head-table"></thead></table>`;
-//     for (const el of data) {
-//         if (el == data[0]) {
-//             for (const itemHead of el) {
-//                 // виведеняя загловка таблиці
-//                 let row = document.createElement('tr');
-//                 row.innerHTML = `<th scope="col">${itemHead}</th>`;
-//                 document.querySelector('.head-table').appendChild(row);
-//             }  
-//             // console.log(el);
-//         } else {
-//             for(const item of el) {
-//                 console.log(item);
-//             }
-//         }
-//         // console.log(el);
-//     } 
+const getTablebody = (data) => {
+    const table = document.querySelector('.table');
+    const tbody = document.createElement('tbody');
+    for (const el of data) {
+        if (el == data[0] || el == data[data.length-1]) {
+            continue;
+        }else {
+        const tr = document.createElement('tr');
+        const fragment = document.createDocumentFragment();
+        el.forEach(x => {
+            if (x == el[0]) {
+                x = x.replace('00:00:00', '');
+                const th = document.createElement('th');
+                th.innerText = x;
+                th.scope = 'col';
+                fragment.appendChild(th);
+            } else {
+                const td = document.createElement('td');
+                td.innerText = x;
+                fragment.appendChild(td);
+            }
+            
+        });
+    tr.appendChild(fragment);
+    tbody.appendChild(tr);
+    table.appendChild(tbody);
+        }
+    }
+};
 
-// }
-// viewInTable();
-
+const  getTableFoot = (fields) => {
+    const table = document.querySelector('.table');
+    const tfoot = document.createElement('tfoot');
+    const tr = document.createElement('tr');
+    const fragment = document.createDocumentFragment();
+    fields.forEach(x => {
+       const th = document.createElement('th');
+       th.innerText = x;
+       th.scope = 'col';
+       fragment.appendChild(th);
+    });
+    tr.appendChild(fragment);
+    tfoot.appendChild(tr);
+    table.appendChild(tfoot);
+};
