@@ -36,17 +36,69 @@ header {
 .report-date {
     margin-top: 12px;
     margin-left: 64px;
-    /* text-align: right; */
     font-weight: 600;
     font-size: 24px;
     line-height: 39px;
     color: #e7b468;
-    /* margin-bottom: 22px; */
-}
+}    
 
 .report-container  {
-    height: 350px;
+    height: 500px;
     background: #151515;
     overflow: scroll;
     border: 1px solid #2e3c49;
+}
+
+.table {
+    /* border: 1px solid  #2e3c49; */
+    background: #151515;
+    color: #c4c4c4;
+}
+
+.table tr:hover td {
+    background-color: #777373;
+    color: #fff;
+}
+
+td,
+th {
+    /* border: 1px solid  #2e3c49; */
+    padding: 5px 10px;
+    text-align: center;
+}
+
+thead th {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0;
+    /* border: 1px solid  #2e3c49; */
+    background: #152515;
+    color: #fff;
+}
+
+thead th:first-child {
+    left: 0;
+    z-index: 1;
+}
+
+tbody th {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    left: 0;
+    background: #152515;
+    color: #fff;
+}
+
+tfoot th {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    bottom: 0;
+    background: #152515;
+    color: #ffff00;
+}
+
+tfoot th:first-child {
+    left: 0;
+    background: #152515;
+    z-index: 1;
 }

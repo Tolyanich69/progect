@@ -1,5 +1,6 @@
 'use strict';
 
+// const urlRequest ='/bases/Серпень-2022.json';
 const urlRequest = 'https://script.google.com/macros/s/AKfycbxRr-fKBYaGxkNV88BssO0x7mHgrQaxQl-VhdqJWy4P-QbMptxChuAwWtJQKVsCmbfa/exec';
 
 const xhr = new XMLHttpRequest();
@@ -10,7 +11,7 @@ xhr.send();
 xhr.onload = () => {
     getTableHead(xhr.response[0]);
     getTablebody(xhr.response);
-    getTableFoot(xhr.response[xhr.response.length-1])
+    getTableFoot(xhr.response[xhr.response.length-1]);
 };
 
 const  getTableHead = (fields) => {
