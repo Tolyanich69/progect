@@ -1,5 +1,8 @@
 'use strict';
 
+const btn = document.querySelector('.btn');
+
+
 // const urlRequest ='/bases/Серпень-2022.json';
 const urlRequest = 'https://script.google.com/macros/s/AKfycbxRr-fKBYaGxkNV88BssO0x7mHgrQaxQl-VhdqJWy4P-QbMptxChuAwWtJQKVsCmbfa/exec';
 
