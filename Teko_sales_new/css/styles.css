@@ -110,7 +110,10 @@ tfoot th:first-child {
 
 .month {
     background:#c4c4c4;
-    height: 16px;
+    color:#14110e;
+    font-size: 14px;
+    height: 18px;
+    width: 150px;
     border-radius: 5px;
 }
 

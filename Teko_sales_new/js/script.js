@@ -1,21 +1,38 @@
 'use strict';
 
-const btn = document.querySelector('.btn');
+const btn = document.querySelector('button');
+const date = new Date();
+const yearMonth = String((new Date()).getFullYear())+'-0'+String(((new Date()).getMonth()+1));
+console.log(yearMonth);
+const month = document.querySelector('input');
+month.value = yearMonth;
+btn.onclick = () => {
+    const month = document.querySelector('input');
+    console.log(month.value);
+    const date = new Date();
+    const numberMonth = date.getMonth();
+    // console.log(("0" + ((new Date()).getMonth()+1)).slice(-2));
+    console.log(String(date.getFullYear()));
+    // month.value = ;
+};
 
 
-// const urlRequest ='/bases/Серпень-2022.json';
+
 const urlRequest = 'https://script.google.com/macros/s/AKfycbxRr-fKBYaGxkNV88BssO0x7mHgrQaxQl-VhdqJWy4P-QbMptxChuAwWtJQKVsCmbfa/exec';
 
-const xhr = new XMLHttpRequest();
-xhr.open('GET', urlRequest);
-xhr.responseType ='json';
-xhr.send();
+function reportPreview(url) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.responseType ='json';
+    xhr.send();
 
-xhr.onload = () => {
-    getTableHead(xhr.response[0]);
-    getTablebody(xhr.response);
-    getTableFoot(xhr.response[xhr.response.length-1]);
-};
+    xhr.onload = () => {
+        getTableHead(xhr.response[0]);
+        getTablebody(xhr.response);
+        getTableFoot(xhr.response[xhr.response.length-1]);
+    };
+}
+reportPreview(urlRequest);
 
 const  getTableHead = (fields) => {
     const table = document.querySelector('.table');
