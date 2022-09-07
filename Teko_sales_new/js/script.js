@@ -1,24 +1,41 @@
 'use strict';
 
+
 const btn = document.querySelector('button');
 const date = new Date();
 const yearMonth = String((new Date()).getFullYear())+'-0'+String(((new Date()).getMonth()+1));
 console.log(yearMonth);
 const month = document.querySelector('input');
 month.value = yearMonth;
+
 btn.onclick = () => {
     const month = document.querySelector('input');
-    console.log(month.value);
-    const date = new Date();
-    const numberMonth = date.getMonth();
+    const url = 'bases/'+month.value+'.json';
+    const element = document.getElementsByClassName('table');
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+    // reportPreview(url);
+//     const date = new Date();
+//     const numberMonth = date.getMonth();
     // console.log(("0" + ((new Date()).getMonth()+1)).slice(-2));
-    console.log(String(date.getFullYear()));
+    // console.log(String(date.getFullYear()));
     // month.value = ;
 };
 
 
 
 const urlRequest = 'https://script.google.com/macros/s/AKfycbxRr-fKBYaGxkNV88BssO0x7mHgrQaxQl-VhdqJWy4P-QbMptxChuAwWtJQKVsCmbfa/exec';
+
+// const fs = require('fs');
+// const dir = 'bases';
+// const files = fs.readdirSync(dir);
+
+// btn.onclick = () => {
+//     const month = document.querySelector('input');
+//     console.log(month.value);
+// };
+
 
 function reportPreview(url) {
     const xhr = new XMLHttpRequest();
