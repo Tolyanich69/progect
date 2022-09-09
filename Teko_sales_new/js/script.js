@@ -15,6 +15,8 @@ btn.onclick = () => {
     while (element.firstChild) {
         element.removeChild(element.firstChild);
     }
+    reportPreview(url);
+    
     // reportPreview(url);
 //     const date = new Date();
 //     const numberMonth = date.getMonth();
