@@ -9,11 +9,15 @@ const urlRequest = 'https://script.google.com/macros/s/AKfycbxRr-fKBYaGxkNV88Bss
       month = document.querySelector('input');
 
 month.value = yearMonth;
+// import {arr} from './main.js';
+// const arr = require('./modules/files.js');
+// console.log(arr);
 // console.log(yearMonth);
 
-const fs = require('fs');
-const dir = 'bases';
-const files = fs.readdirSync(dir);
+// import * as fs from 'fs';
+// import { readdirSync } from 'fs';
+// const dir = 'bases';
+// const files = readdirSync(dir);
 // console.log(files);
 
 
