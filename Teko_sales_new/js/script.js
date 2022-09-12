@@ -1,25 +1,26 @@
 'use strict';
 
-
-
 const urlRequest = 'https://script.google.com/macros/s/AKfycbxRr-fKBYaGxkNV88BssO0x7mHgrQaxQl-VhdqJWy4P-QbMptxChuAwWtJQKVsCmbfa/exec',
       btnView = document.querySelector('button'),
       date = new Date(),
       yearMonth = String((new Date()).getFullYear())+'-0'+String(((new Date()).getMonth()+1)),
-      month = document.querySelector('input');
+      month = document.querySelector('input'),
+      urlfiles = 'bases/files.txt';
+
+function loadfiles(url) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.responseType ='json';
+    xhr.send();
+    xhr.onload = () => {
+        return xhr.response;
+    };
+}
+
+console.log(loadfiles(urlfiles));
+
 
 month.value = yearMonth;
-// import {arr} from './main.js';
-// const arr = require('./modules/files.js');
-// console.log(arr);
-// console.log(yearMonth);
-
-// import * as fs from 'fs';
-// import { readdirSync } from 'fs';
-// const dir = 'bases';
-// const files = readdirSync(dir);
-// console.log(files);
-
 
 btnView.onclick = () => {
     const month = document.querySelector('input');
@@ -32,16 +33,6 @@ btnView.onclick = () => {
     // }
     reportPreview(url);  
 };
-
-
-    
-    
-
-
-// btn.onclick = () => {
-//     const month = document.querySelector('input');
-//     console.log(month.value);
-// };
 
 function reportPreview(url) {
     const xhr = new XMLHttpRequest();
